@@ -5,6 +5,7 @@
 4. Agregar el texto al HTML.
 
 -- v0.0.1
+
 1. No ingresar texto vacío (deshabilitar el botón de enviar).
 2. Contar la cantidad de caracteres de forma regresiva.
 
