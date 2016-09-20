@@ -1,0 +1,17 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.bg{
+	background-image: url("../img/fondo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#publicar{
+	border: 1px solid #424242;
+	background-color: #424242;
+	color: #fff;
+}
