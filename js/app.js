@@ -7,8 +7,7 @@ window.addEventListener("load", function() {
     	var texto = document.getElementById("texto");
     	mensajes(texto.value);
  		texto.value = "";
- 		document.getElementById("contador").value = 140;
-        boton.disabled = true;
+        btn.disabled = true;
 	});
 
 		function mensajes (texto) {
@@ -17,22 +16,38 @@ window.addEventListener("load", function() {
     	var mensajes = document.getElementById("mensaje");
     	mensajes.insertBefore(contenedorMensaje, mensaje.childNodes[0]).classList.add("cajaTweet");
 		}
-	texto.addEventListener("keypress", function (){
+	texto.addEventListener("keyup", function (){
 		btn.disabled = false;
 		var caracteresMaximos = 140;
+        var contador = document.getElementById("contador");
         var longitud = document.getElementById("texto").value.length;
+
         if(longitud <= caracteresMaximos) {
-            document.getElementById("contador").value = caracteresMaximos - longitud;
-        } else {
-            document.getElementById("contador").value = caracteresMaximos - longitud;
+            contador.value = caracteresMaximos - longitud;
+        } 
+        if (longitud == 0) {
+            btn.disabled = true;
         }
-        if(longitud == 0) {
-            boton.disabled = true;
+        if (longitud >= caracteresMaximos) {
+            contador.value = caracteresMaximos - longitud;
+            btn.disabled = true;
         }
-        if(longitud > caracteresMaximos) {
-            boton.disabled = true;
+        if (longitud >= 0 && longitud < 120) {
+            contador.classList.add("colorNegro");
+            contador.classList.remove("colorMarron");
+            contador.classList.remove("colorVerde");
+        }
+        if (longitud >= 120 && longitud < 130) {
+            contador.classList.add("colorMarron");
+            contador.classList.remove("colorNegro");
+            contador.classList.remove("colorVerde");
         }
 
+        if (longitud >= 130 && longitud < caracteresMaximos) {
+            contador.classList.add("colorVerde");
+            contador.classList.remove("colorMarron");
+            contador.classList.remove("colorNegro");
+        }    
     });
 
 });

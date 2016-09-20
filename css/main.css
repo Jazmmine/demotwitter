@@ -18,19 +18,24 @@
 
 .cajaTweet{
 	background-color: #848484;
-	padding: 15px;
+	padding: 5px;
 	font-size: 17px;
 	color: #FFF;
 	margin-bottom: 5px;
 	border-radius: 5px;
 }
 
-.colorPrimero {
-	color: #0B3B0B;
+.colorMarron {
+	color: brown;
 	font-weight: bold;
 }
 
-.colorSegundo {
-	color: #DF013A;
+.colorVerde {
+	color: green;
+	font-weight: bold;
+}
+
+.colorNegro {
+	color: black;
 	font-weight: bold;
 }
