@@ -50,4 +50,14 @@ window.addEventListener("load", function() {
         }    
     });
 
+    texto.addEventListener("keypress", function(e){
+        if (e.which == 13 || e.keyCode == 13) {
+            var tamanioContenido = texto.scrollHeight;
+            texto.style.height = tamanioContenido + 22 + "px";
+            console.log(texto.style.height);
+        }
+
+    });
+
+
 });
